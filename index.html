@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verso</title>
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar toggle button -->
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-container">
+            <h2>Main Menu</h2>
+            <button class="sidebar-btn" onclick="redirectTo('askpdf.html')">Ask the PDF</button>
+            <button class="sidebar-btn" onclick="redirectTo('flashcards.html')">Flashcards</button>
+            <button class="sidebar-btn" onclick="redirectTo('audio.html')">Ask your audio & video</button>
+            <button class="sidebar-btn" onclick="redirectTo('faq.html')">FAQ</button>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <img src="assets/versologotext.png">
+    <h2>Choose an option below to get started</h2>
+    <div class="container">
+        <div class="button-row">
+            <button class="mainmenu" onclick="redirectTo('askpdf.html')">Ask the PDF</button>
+            <button class="mainmenu" onclick="redirectTo('flashcards.html')">Flashcards</button>
+        </div>
+        <div class="button-row">
+            <button class="mainmenu" onclick="redirectTo('audio.html')">Ask your audio & video</button>
+            <button class="mainmenu" onclick="redirectTo('faq.html')">FAQ</button>
+        </div>
+    </div>
+
+    <!-- JavaScript to toggle sidebar -->
+    <script src="script.js"></script>
+</body>
+</html>

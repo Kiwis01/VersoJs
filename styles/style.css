@@ -1,0 +1,101 @@
+body {
+    background-color: #0e1117;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+h1, h2 {
+    color: aliceblue;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.mainmenu {
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.mainmenu:hover {
+    background-color: #7b1fa2;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #373340;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-container {
+    background-color: #0e1117; /* Black background for container */
+    padding: 20px; /* Add padding to the container */
+    margin: 10px; /* Add margin to separate the container from the sidebar edges */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+.sidebar-btn {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 18px;
+    color: white;
+    background-color: #333;
+    border: none;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 10px; /* Add margin-bottom for spacing */
+}
+
+.sidebar-btn:hover {
+    background-color: #a454ff;
+}
+
+.active-btn{
+    background-color: #a454ff;
+}
+
+.toggle-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    border: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1001; /* Ensure it stays above other elements */
+}
