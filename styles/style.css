@@ -99,3 +99,20 @@ h1, h2 {
     left: 15px;
     z-index: 1001; /* Ensure it stays above other elements */
 }
+
+/* Drag and drop */
+#dropZone {
+    width: 300px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 200px;
+    color: #aaa;
+    font-family: Arial, sans-serif;
+    margin: 50px auto;
+  }
+  #dropZone.hover {
+    border-color: #333;
+    color: #333;
+  }

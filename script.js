@@ -22,3 +22,38 @@ window.onload = function() {
         document.getElementById("faq-btn").classList.add("active-btn");
     }
 };
+
+// Drag and drop code
+const dropZone = document.getElementById('dropZone');
+
+dropZone.addEventListener('dragover', (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+  dropZone.classList.add('hover');
+});
+
+dropZone.addEventListener('dragleave', (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+  dropZone.classList.remove('hover');
+});
+
+dropZone.addEventListener('drop', (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+  dropZone.classList.remove('hover');
+
+  const files = event.dataTransfer.files;
+  handleFiles(files);
+});
+
+function handleFiles(files) {
+  for (const file of files) {
+    if(file.type == "application/pdf"){
+        console.log(`File: ${file.name}, Size: ${file.size} bytes, Type: ${file.type}`);
+    }
+    else{
+        alert("Invalid file type, file must be a PDF")
+    }
+  }
+}
